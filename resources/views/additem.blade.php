@@ -8,9 +8,15 @@
 
 <body>
     <div class="itemAdd">
+        <div>
+            @if (Session::has('message'))
+                <p>{{Session::get('message')}}</p>
+            @endif
+        </div>
     <h1>Add an Item</h1>
     yoyoyooy
-    <form action="">
+    <form method="POST" action="{{route('item.save')}}">
+        @csrf
         
         <div class="mb-3">
             <input type="text" class="form-control" placeholder="Item name" name ="itemname">

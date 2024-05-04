@@ -24,7 +24,8 @@ Route::get('/', function () {
 
 Route::controller(itemcontroller::class)->group(function(){
     Route::get('/addItem','additem');
-    
+    Route::post('/saveItem','save') -> name('item.save');
+
 });
 
 
