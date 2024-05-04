@@ -17,10 +17,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-// Route::get('/home', function () {
-//     return ('home');
-// });
+Route::get('/addItem', function () {
+    return view('additem');
+});
 
-// Route::get('/pp', function () {
-//     return ('jp');
-// });
+
