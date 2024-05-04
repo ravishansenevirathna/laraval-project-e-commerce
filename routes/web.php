@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\itemcontroller;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,8 +18,15 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/addItem', function () {
-    return view('additem');
+// Route::get('/addItem', function () {
+//     return view('additem');
+// });
+
+Route::controller(itemcontroller::class)->group(function(){
+    Route::get('/addItem','additem');
+    
 });
+
+
 
 
