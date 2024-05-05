@@ -1,6 +1,6 @@
 import React from 'react'
 import { useStateContext } from '../contexts/ContextProvider'
-import { Navigate } from 'react-router-dom'
+import { Navigate,Outlet} from 'react-router-dom'
 
 
 export default function GuestLayout() {
@@ -12,6 +12,8 @@ export default function GuestLayout() {
 
 
   return (
-    <div>GuestLayout</div>
+    <div id="guestLayout">
+    <Outlet />
+  </div>
   )
 }
